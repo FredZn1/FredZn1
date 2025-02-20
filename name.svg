@@ -1,38 +1,39 @@
-<svg fill="none" viewBox="0 0 800 200" width="800" height="200" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        @keyframes fadeIn {
-          0% { opacity: 0; transform: scale(0.8); }
-          100% { opacity: 1; transform: scale(1); }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NARUTO Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
         }
-        @keyframes rotateMove {
-          0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
-          100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+        svg {
+            width: 300px;
+            height: auto;
         }
-        h1 {
-          font-family: 'Inter', sans-serif;
-          margin: 0;
-          font-size: 4em;
-          font-weight: 900;
-          letter-spacing: -.05em;
-          text-align: center;
-          color: #FF4500;
-          animation: fadeIn 2s ease-in-out;
+        path {
+            fill: none;
+            stroke: orange;
+            stroke-width: 5;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 300;
+            animation: draw 2s linear forwards;
         }
-        .rotating {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          font-size: 2em;
-          animation: rotateMove 5s linear infinite;
+        @keyframes draw {
+            to { stroke-dashoffset: 0; }
         }
-        .rotating:nth-of-type(1) { animation-delay: 0s; }
-        .rotating:nth-of-type(2) { animation-delay: 0.5s; }
-        .rotating:nth-of-type(3) { animation-delay: 1s; }
-        .rotating:nth-of-type(4) { animation-delay: 1.5s; }
-      </style>
-      <h1>ＮＡＲＵＴＯ</h1>
-    </div>
-  </foreignObject>
-</svg>
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg">
+        <text x="10" y="70" font-size="60" font-family="Arial, sans-serif" fill="orange" stroke="orange" stroke-width="2" stroke-linejoin="round">
+            NARUTO
+        </text>
+    </svg>
+</body>
+</html>
