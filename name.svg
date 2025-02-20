@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NARUTO Animation</title>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
-        }
-        svg {
-            width: 300px;
-            height: auto;
-        }
-        path {
-            fill: none;
+        text {
+            font-size: 60px;
+            font-family: Arial, sans-serif;
+            fill: orange;
             stroke: orange;
-            stroke-width: 5;
+            stroke-width: 2;
+            stroke-linejoin: round;
             stroke-dasharray: 300;
             stroke-dashoffset: 300;
             animation: draw 2s linear forwards;
@@ -27,13 +14,19 @@
         @keyframes draw {
             to { stroke-dashoffset: 0; }
         }
+        .logo {
+            fill: none;
+            stroke: gray;
+            stroke-width: 5;
+        }
     </style>
-</head>
-<body>
-    <svg viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg">
-        <text x="10" y="70" font-size="60" font-family="Arial, sans-serif" fill="orange" stroke="orange" stroke-width="2" stroke-linejoin="round">
-            NARUTO
-        </text>
-    </svg>
-</body>
-</html>
+    
+    <!-- Mercedes Logo -->
+    <circle cx="250" cy="250" r="100" class="logo" />
+    <line x1="250" y1="150" x2="250" y2="350" class="logo" />
+    <line x1="250" y1="250" x2="325" y2="350" class="logo" />
+    <line x1="250" y1="250" x2="175" y2="350" class="logo" />
+    
+    <!-- NARUTO Text -->
+    <text x="150" y="470">NARUTO</text>
+</svg>
