@@ -1,11 +1,14 @@
-<svg fill="none" viewBox="0 0 800 100" width="800" height="100" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 800 200" width="800" height="200" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
-        @keyframes gradientText {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
+        @keyframes fadeIn {
+          0% { opacity: 0; transform: scale(0.8); }
+          100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes rotateMove {
+          0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+          100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
         }
         h1 {
           font-family: 'Inter', sans-serif;
@@ -14,38 +17,22 @@
           font-weight: 900;
           letter-spacing: -.05em;
           text-align: center;
-          background: linear-gradient(270deg, #FF8C00, #FF4500, #FFD700, #FF4500);
-          background-size: 400%;
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: gradientText 3s ease infinite;
+          color: #FF4500;
+          animation: fadeIn 2s ease-in-out;
         }
-        @keyframes bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-20px); }
-        }
-        .bouncing {
-          position: fixed;
+        .rotating {
+          position: absolute;
           top: 50%;
-          font-size: 1.5em;
-          text-shadow: 0 0 1px #000;
-          animation: bounce 1.5s infinite ease-in-out;
+          left: 50%;
+          font-size: 2em;
+          animation: rotateMove 5s linear infinite;
         }
-        .bouncing:nth-of-type(1) { left: 10%; animation-delay: 0s; }
-        .bouncing:nth-of-type(2) { left: 25%; animation-delay: 0.2s; }
-        .bouncing:nth-of-type(3) { left: 40%; animation-delay: 0.4s; }
-        .bouncing:nth-of-type(4) { left: 55%; animation-delay: 0.6s; }
-        .bouncing:nth-of-type(5) { left: 70%; animation-delay: 0.8s; }
-        .bouncing:nth-of-type(6) { left: 85%; animation-delay: 1s; }
+        .rotating:nth-of-type(1) { animation-delay: 0s; }
+        .rotating:nth-of-type(2) { animation-delay: 0.5s; }
+        .rotating:nth-of-type(3) { animation-delay: 1s; }
+        .rotating:nth-of-type(4) { animation-delay: 1.5s; }
       </style>
       <h1>ＮＡＲＵＴＯ</h1>
-      <div class="bouncing">☀️</div>
-      <div class="bouncing">⚙️</div>
-      <div class="bouncing">🚗</div>
-      <div class="bouncing">☀️</div>
-      <div class="bouncing">⚙️</div>
-      <div class="bouncing">🚗</div>
     </div>
   </foreignObject>
 </svg>
