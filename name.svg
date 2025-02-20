@@ -1,43 +1,45 @@
 <svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
   <style>
-    @keyframes strokeAnimation {
+    @keyframes fadeIn {
       0% {
-        stroke-dasharray: 300;
-        stroke-dashoffset: 300;
-        fill: none;
-      }
-      50% {
-        stroke-dashoffset: 0;
-        fill: none;
+        opacity: 0;
+        transform: translateY(20px);
       }
       100% {
-        fill: black;
+        opacity: 1;
+        transform: translateY(0);
       }
     }
-    @keyframes colorFade {
-      0% {
-        fill: red;
+    @keyframes typing {
+      from {
+        width: 0;
       }
+      to {
+        width: 100%;
+      }
+    }
+    @keyframes blink {
       50% {
-        fill: blue;
-      }
-      100% {
-        fill: black;
+        border-color: transparent;
       }
     }
     text {
-      font-size: 60px;
-      font-family: Arial, sans-serif;
-      stroke: black;
-      stroke-width: 2;
-      stroke-dasharray: 300;
-      stroke-dashoffset: 300;
-      animation: strokeAnimation 3s ease-in-out forwards, colorFade 3s ease-in-out forwards;
+      font-size: 40px;
+      font-family: 'Courier New', monospace;
+      fill: white;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+    .typewriter {
+      font-size: 40px;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 4px solid white;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.8s infinite;
     }
   </style>
-  
-  <!-- Mercedes-Benz logotipi -->
-  <image href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Mercedes-Benz_Logo_2010.svg/200px-Mercedes-Benz_Logo_2010.svg.png" x="200" y="20" width="200" height="200" opacity="0.2"/>
-  
-  <text x="50" y="100">ＮＡＲＵＴＯ</text>
+  <rect width="100%" height="100%" fill="#0d1117"/>
+  <text x="50" y="100" class="typewriter">ＮＡＲＵＴＯ</text>
 </svg>
