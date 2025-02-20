@@ -1,6 +1,15 @@
 <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
     <style>
-        text {
+        .logo {
+            fill: none;
+            stroke: gray;
+            stroke-width: 5;
+            stroke-dasharray: 500;
+            stroke-dashoffset: 500;
+            animation: drawLogo 3s ease-out forwards;
+        }
+        
+        .text {
             font-size: 60px;
             font-family: Arial, sans-serif;
             fill: orange;
@@ -8,31 +17,26 @@
             stroke-width: 2;
             stroke-linejoin: round;
             opacity: 0;
-            animation: fadeIn 2s forwards 2s;
+            animation: fadeIn 2s ease-in forwards 3s;
         }
+        
+        @keyframes drawLogo {
+            from { stroke-dashoffset: 500; }
+            to { stroke-dashoffset: 0; }
+        }
+        
         @keyframes fadeIn {
             from { opacity: 0; transform: scale(0.8); }
             to { opacity: 1; transform: scale(1); }
         }
-        .logo {
-            fill: none;
-            stroke: gray;
-            stroke-width: 5;
-            stroke-dasharray: 500;
-            stroke-dashoffset: 500;
-            animation: drawLogo 3s linear forwards;
-        }
-        @keyframes drawLogo {
-            to { stroke-dashoffset: 0; }
-        }
     </style>
     
-    <!-- Mercedes Logo -->
+    <!-- Mercedes-Benz Logo -->
     <circle cx="250" cy="250" r="100" class="logo" />
     <line x1="250" y1="150" x2="250" y2="350" class="logo" />
     <line x1="250" y1="250" x2="325" y2="350" class="logo" />
     <line x1="250" y1="250" x2="175" y2="350" class="logo" />
     
-    <!-- NARUTO Text -->
-    <text x="150" y="470">NARUTO</text>
+    <!-- Animated Text -->
+    <text x="150" y="470" class="text">NARUTO</text>
 </svg>
