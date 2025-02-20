@@ -1,31 +1,58 @@
-<svg viewBox="0 0 800 300" width="800" height="300">
+<svg viewBox="0 0 800 400" width="800" height="400">
+  <!-- Qora Fon -->
   <rect width="100%" height="100%" fill="black"/>
-  
-  <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="80" font-family="Arial, sans-serif"
-        fill="white" stroke="cyan" stroke-width="2" filter="url(#glow)">
-    NARUTO
-  </text>
 
+  <!-- Mercedes-Benz Logosi -->
+  <g id="mercedes" transform="translate(400,200)">
+    <circle cx="0" cy="0" r="100" stroke="white" stroke-width="5" fill="none"/>
+    <polygon points="0,-80 20,20 -20,20" fill="white"/>
+    <polygon points="69,40 -20,20 0,-80" fill="white"/>
+    <polygon points="-69,40 20,20 0,-80" fill="white"/>
+  </g>
+
+  <!-- Gradient -->
   <defs>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="cyan"/>
+      <stop offset="50%" stop-color="magenta"/>
+      <stop offset="100%" stop-color="blue"/>
+    </linearGradient>
+    
     <filter id="glow">
-      <feGaussianBlur stdDeviation="6.5" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
 
+  <!-- NARUTO Matni -->
+  <text x="50%" y="70%" text-anchor="middle" dy=".3em"
+        font-size="80" font-family="Impact, sans-serif"
+        fill="url(#neonGradient)" stroke="white" stroke-width="2" 
+        filter="url(#glow)" class="neon-text">
+    NARUTO
+  </text>
+
+  <!-- Animatsiya -->
   <style>
-    text {
-      font-weight: bold;
-      text-transform: uppercase;
-      animation: neonGlow 1.5s infinite alternate;
+    #mercedes {
+      animation: rotateLogo 4s linear infinite;
+    }
+
+    .neon-text {
+      animation: neonGlow 1.8s infinite alternate ease-in-out;
+    }
+
+    @keyframes rotateLogo {
+      from { transform: translate(400px,200px) rotate(0deg); }
+      to { transform: translate(400px,200px) rotate(360deg); }
     }
 
     @keyframes neonGlow {
-      0% { text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan; }
-      100% { text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 50px cyan; }
+      0% { text-shadow: 0 0 8px cyan, 0 0 16px magenta, 0 0 24px blue; }
+      100% { text-shadow: 0 0 12px cyan, 0 0 20px magenta, 0 0 30px blue; }
     }
   </style>
 </svg>
