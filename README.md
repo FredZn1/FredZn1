@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="name.svg" alt="abdukulov"/>
+  <img src="name.svg" alt="FredZn1"/>
 </h1>
 
 
