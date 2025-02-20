@@ -1,31 +1,31 @@
 <svg viewBox="0 0 800 300" width="800" height="300">
+  <rect width="100%" height="100%" fill="black"/>
+  
+  <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="80" font-family="Arial, sans-serif"
+        fill="white" stroke="cyan" stroke-width="2" filter="url(#glow)">
+    NARUTO
+  </text>
+
   <defs>
-    <filter id="neon">
-      <feGaussianBlur stdDeviation="4.5" result="blurred"/>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6.5" result="coloredBlur"/>
       <feMerge>
-        <feMergeNode in="blurred"/>
-        <feMergeNode in="blurred"/>
+        <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
 
-  <rect width="100%" height="100%" fill="black"/>
-
-  <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="80" font-family="Arial, sans-serif" fill="cyan" filter="url(#neon)" class="neon-text">
-    NARUTO
-  </text>
-
   <style>
-    .neon-text {
+    text {
       font-weight: bold;
       text-transform: uppercase;
-      animation: flicker 1.5s infinite alternate;
+      animation: neonGlow 1.5s infinite alternate;
     }
 
-    @keyframes flicker {
-      0% { opacity: 0.8; text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 20px cyan; }
-      100% { opacity: 1; text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan; }
+    @keyframes neonGlow {
+      0% { text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 20px cyan, 0 0 40px cyan; }
+      100% { text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 50px cyan; }
     }
   </style>
 </svg>
