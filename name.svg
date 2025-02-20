@@ -6,23 +6,31 @@
     </linearGradient>
   </defs>
 
-  <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="80" font-family="Arial, sans-serif" fill="url(#gradient)" class="parallax-text">
-    NARUTO
+  <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="80" font-family="Arial, sans-serif" fill="url(#gradient)">
+    <tspan class="wave" dx="-50">N</tspan>
+    <tspan class="wave" dx="10">A</tspan>
+    <tspan class="wave" dx="10">R</tspan>
+    <tspan class="wave" dx="10">U</tspan>
+    <tspan class="wave" dx="10">T</tspan>
+    <tspan class="wave" dx="10">O</tspan>
   </text>
 
   <style>
-    .parallax-text {
-      font-weight: bold;
-      transform-origin: center;
-      transition: transform 0.2s ease-out;
+    .wave {
+      display: inline-block;
+      animation: wave 1.5s infinite ease-in-out;
+    }
+    
+    .wave:nth-child(1) { animation-delay: 0s; }
+    .wave:nth-child(2) { animation-delay: 0.1s; }
+    .wave:nth-child(3) { animation-delay: 0.2s; }
+    .wave:nth-child(4) { animation-delay: 0.3s; }
+    .wave:nth-child(5) { animation-delay: 0.4s; }
+    .wave:nth-child(6) { animation-delay: 0.5s; }
+
+    @keyframes wave {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
     }
   </style>
-
-  <script>
-    document.addEventListener("mousemove", (e) => {
-      let x = (e.clientX / window.innerWidth - 0.5) * 20;
-      let y = (e.clientY / window.innerHeight - 0.5) * 20;
-      document.querySelector(".parallax-text").style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-    });
-  </script>
 </svg>
