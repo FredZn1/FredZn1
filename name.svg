@@ -1,1 +1,36 @@
 
+<svg viewBox="0 0 600 200">
+  <text x="50" y="150" class="parallax-text">ＮＡＲＵＴＯ</text>
+</svg>
+
+<style>
+  svg {
+    width: 100%;
+    height: 200px;
+    display: block;
+  }
+
+  .parallax-text {
+    font-size: 80px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    fill: url(#gradient);
+    text-anchor: middle;
+    transform-origin: center;
+    transition: transform 0.2s ease-out;
+  }
+
+  /* Gradient efekti */
+  svg defs linearGradient {
+    stop:first-child { stop-color: #ff7b00; }
+    stop:last-child { stop-color: #ff0000; }
+  }
+</style>
+
+<script>
+  document.addEventListener("mousemove", (e) => {
+    let x = (e.clientX / window.innerWidth - 0.5) * 20;
+    let y = (e.clientY / window.innerHeight - 0.5) * 20;
+    document.querySelector(".parallax-text").style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+  });
+</script>
