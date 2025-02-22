@@ -1,68 +1,48 @@
-<svg fill="none" viewBox="0 0 800 150" width="800" height="150" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 800 100" width="800" height="100" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
-        @keyframes cosmicGlow {
-          0%, 100% {
-            text-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00;
-          }
-          50% {
-            text-shadow: 0 0 15px #ff6347, 0 0 30px #ff4500;
-          }
+        @keyframes gradientText {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
-        
-        @keyframes floatEffect {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-        }
-
-        @keyframes spinningAura {
-          0% { box-shadow: 0 0 20px 5px rgba(255, 165, 0, 0.8); }
-          50% { box-shadow: 0 0 30px 10px rgba(255, 140, 0, 0.6); }
-          100% { box-shadow: 0 0 20px 5px rgba(255, 165, 0, 0.8); }
-        }
-
-        .cosmic-container {
-          background: radial-gradient(circle, #111, #000);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 130px;
-          border-radius: 15px;
-          overflow: hidden;
-          position: relative;
-          box-shadow: 0 0 50px rgba(255, 69, 0, 0.5);
-        }
-
-        .aura {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 240px;
-          height: 240px;
-          background: radial-gradient(circle, #ff4500, transparent);
-          border-radius: 50%;
-          transform: translate(-50%, -50%);
-          animation: spinningAura 5s infinite alternate;
-        }
-
         h1 {
-          font-family: 'Arial', sans-serif;
+          font-family: 'Inter', sans-serif;
+          margin: 0;
           font-size: 4em;
-          font-weight: bold;
-          color: white;
+          font-weight: 900;
+          letter-spacing: -.05em;
           text-align: center;
-          letter-spacing: 10px;
-          position: relative;
-          z-index: 2;
-          animation: cosmicGlow 3s infinite alternate, floatEffect 6s infinite ease-in-out;
+          background: linear-gradient(270deg, #f2f3f4 0, #ff4500, #f2f3f4, #ff4500);
+          background-size: 400%;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: gradientText 3s ease infinite;
         }
+        @keyframes floating {
+          0% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+          100% { transform: translateY(0); }
+        }
+        .icon {
+          font-size: 1.5em;
+          position: absolute;
+          animation: floating 3s ease-in-out infinite;
+        }
+        .icon:nth-of-type(1) { top: 10%; left: 20%; animation-delay: 0.5s; }
+        .icon:nth-of-type(2) { top: 40%; left: 40%; animation-delay: 1s; }
+        .icon:nth-of-type(3) { top: 70%; left: 60%; animation-delay: 1.5s; }
+        .icon:nth-of-type(4) { top: 30%; left: 80%; animation-delay: 2s; }
+        .icon:nth-of-type(5) { top: 50%; left: 10%; animation-delay: 2.5s; }
       </style>
-      <div class="cosmic-container">
-        <div class="aura"></div>
-        <h1>N A R U T O</h1>
-      </div>
+      <h1>N A R U T O</h1>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
     </div>
   </foreignObject>
 </svg>
-
