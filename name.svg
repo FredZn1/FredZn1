@@ -1,24 +1,22 @@
 <svg fill="none" viewBox="0 0 800 100" width="800" height="100" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
-      
       @keyframes floating {
         0% { transform: translateY(0); }
         50% { transform: translateY(-5px); }
         100% { transform: translateY(0); }
       }
       text {
-        font-family: 'Montserrat', sans-serif;
+        font-family: Arial, sans-serif; /* Google Fonts o'rniga oddiy shrift */
         font-size: 50px;
-        font-weight: 900;
+        font-weight: bold;
         text-anchor: middle;
         fill: #FFFFFF; /* Oq rang */
-        letter-spacing: 3px;
+        letter-spacing: 2px;
       }
       .icon {
         font-size: 20px;
-        fill: #FFFFFF; /* Oq rang */
+        fill: #FFFFFF;
         animation: floating 3s ease-in-out infinite;
       }
     </style>
