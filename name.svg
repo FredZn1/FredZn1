@@ -1,48 +1,32 @@
 <svg fill="none" viewBox="0 0 800 100" width="800" height="100" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        @keyframes gradientText {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        h1 {
-          font-family: 'Inter', sans-serif;
-          margin: 0;
-          font-size: 4em;
-          font-weight: 900;
-          letter-spacing: -.05em;
-          text-align: center;
-          background: linear-gradient(270deg, #f2f3f4 0, #ff4500, #f2f3f4, #ff4500);
-          background-size: 400%;
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: gradientText 3s ease infinite;
-        }
-        @keyframes floating {
-          0% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-          100% { transform: translateY(0); }
-        }
-        .icon {
-          font-size: 1.5em;
-          position: absolute;
-          animation: floating 3s ease-in-out infinite;
-        }
-        .icon:nth-of-type(1) { top: 10%; left: 20%; animation-delay: 0.5s; }
-        .icon:nth-of-type(2) { top: 40%; left: 40%; animation-delay: 1s; }
-        .icon:nth-of-type(3) { top: 70%; left: 60%; animation-delay: 1.5s; }
-        .icon:nth-of-type(4) { top: 30%; left: 80%; animation-delay: 2s; }
-        .icon:nth-of-type(5) { top: 50%; left: 10%; animation-delay: 2.5s; }
-      </style>
-      <h1>Xabibullayev Murodillo</h1>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-    </div>
-  </foreignObject>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+      
+      @keyframes floating {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+        100% { transform: translateY(0); }
+      }
+      text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 50px;
+        font-weight: 900;
+        text-anchor: middle;
+        fill: #FFFFFF; /* Oq rang */
+        letter-spacing: 3px;
+      }
+      .icon {
+        font-size: 20px;
+        fill: #FFFFFF; /* Oq rang */
+        animation: floating 3s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  <text x="400" y="60">Xabibullayev Murodillo</text>
+  <text class="icon" x="100" y="30">★</text>
+  <text class="icon" x="200" y="80">✦</text>
+  <text class="icon" x="350" y="50">⚡</text>
+  <text class="icon" x="600" y="70">🌟</text>
+  <text class="icon" x="700" y="40">✨</text>
 </svg>
