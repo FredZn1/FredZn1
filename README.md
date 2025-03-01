@@ -7,6 +7,6 @@
 </p>
 
 <a href="https://t.me/FredZn1"><img width="12px" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
-TELEGRAM</a></br>
+</a></br>
 
 ![](https://github-profile-trophy.vercel.app/?username=Fredzn1&theme=radical&no-frame=false&no-bg=false&margin-w=4)
