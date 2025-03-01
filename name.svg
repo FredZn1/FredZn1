@@ -7,7 +7,7 @@
         100% { transform: translateY(0); }
       }
       text {
-        font-family: Arial, sans-serif; /* Google Fonts o'rniga oddiy shrift */
+        font-family: 'Times New Roman', serif;
         font-size: 50px;
         font-weight: bold;
         text-anchor: middle;
@@ -16,7 +16,7 @@
       }
       .icon {
         font-size: 20px;
-        fill: #FFFFFF;
+        fill: #000000; /* Qora rang */
         animation: floating 3s ease-in-out infinite;
       }
     </style>
